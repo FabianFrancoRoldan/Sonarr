@@ -33,6 +33,11 @@ namespace Sonarr.Api.V3.Series
                     series.ProfileId = resource.QualityProfileId.Value;
                 }
 
+                if (resource.LanguageProfileId.HasValue)
+                {
+                    series.LanguageProfileId = resource.LanguageProfileId.Value;
+                }
+
                 if (resource.SeasonFolder.HasValue)
                 {
                     series.SeasonFolder = resource.SeasonFolder.Value;
